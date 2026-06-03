@@ -1,8 +1,19 @@
+# Python
 __pycache__/
+*.pyc
+*.pyo
+
+# Build
 build/
 dist/
 output/
-*.spec
-*.pyc
-*.pyo
+
+# Installer / EXE
 *.exe
+
+# Spec
+*.spec
+
+# OS
+.DS_Store
+Thumbs.db
