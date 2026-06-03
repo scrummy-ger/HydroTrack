@@ -1,7 +1,7 @@
 [Setup]
 AppId={{HydroTrackApp}}
 AppName=HydroTrack
-AppVersion=1.0
+AppVersion=1.0.1
 AppPublisher=Daniel Siepmann
 DefaultDirName={autopf}\HydroTrack
 DefaultGroupName=HydroTrack
@@ -12,7 +12,7 @@ SolidCompression=yes
 SetupIconFile=HydroTrack.ico
 UninstallDisplayIcon={app}\HydroTrack.exe
 
-VersionInfoVersion=1.0.0.0
+VersionInfoVersion=1.0.0.1
 VersionInfoCompany=DS Development
 VersionInfoDescription=HydroTrack
 
