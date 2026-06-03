@@ -3,21 +3,25 @@ AppId={{HydroTrackApp}}
 AppName=HydroTrack
 AppVersion=1.0.1
 AppPublisher=Daniel Siepmann
+
 DefaultDirName={autopf}\HydroTrack
 DefaultGroupName=HydroTrack
+
 OutputBaseFilename=HydroTrack_Setup
 OutputDir=output
+
 Compression=lzma
 SolidCompression=yes
-SetupIconFile=HydroTrack.ico
+
+SetupIconFile=assets\HydroTrack.ico
 UninstallDisplayIcon={app}\HydroTrack.exe
 
-VersionInfoVersion=1.0.0.1
+VersionInfoVersion=1.0.1.0
 VersionInfoCompany=DS Development
 VersionInfoDescription=HydroTrack
 
 WizardStyle=modern
-WizardSmallImageFile=HydroTrack_Small.bmp
+WizardSmallImageFile=assets\HydroTrack_Small.bmp
 
 DisableDirPage=no
 DisableProgramGroupPage=yes
@@ -38,12 +42,10 @@ Name: "{userdesktop}\HydroTrack"; Filename: "{app}\HydroTrack.exe"; Tasks: deskt
 Filename: "{app}\HydroTrack.exe"; Description: "HydroTrack starten"; Flags: nowait postinstall skipifsilent
 
 [Registry]
-; Autostart (optional)
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; \
 ValueType: string; ValueName: "HydroTrack"; \
 ValueData: "{app}\HydroTrack.exe"; Tasks: autostart; Flags: uninsdeletevalue
 
 [UninstallDelete]
-; Falls du später Logs oder Daten hast (optional)
 Type: files; Name: "{app}\*.log"
 Type: filesandordirs; Name: "{app}\data"
