@@ -57,7 +57,11 @@ def get_appdata_dir():
 
 DATA_DIR = get_appdata_dir()
 DATA_FILE = os.path.join(DATA_DIR, "hydrotrack_data.json")
-ICON_FILE = resource_path("HydroTrack.ico")
+
+# ✅ FIX: Assets sauber aus assets/ laden
+ICON_FILE = resource_path("assets/HydroTrack.ico")
+SMALL_IMAGE = resource_path("assets/HydroTrack_Small.bmp")
+
 
 
 # ============================================================

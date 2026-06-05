@@ -10,6 +10,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
+<<<<<<< HEAD
       - name: Repo auschecken
         uses: actions/checkout@v3
 
@@ -36,3 +37,38 @@ jobs:
           name: HydroTrack-Build
           path: |
             dist/*
+=======
+      - name: 📥 Repo klonen
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python installieren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Dependencies installieren
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: ⚙️ EXE bauen
+        run: |
+          pyinstaller --onefile --noconsole --icon=assets/HydroTrack.ico HydroTrack.py
+
+      - name: 📥 Inno Setup installieren
+        run: |
+          choco install innosetup -y
+
+      - name: 🏗 Installer bauen
+        run: |
+          iscc installer.iss
+
+      - name: 🚀 Release erstellen + Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/HydroTrack.exe
+            output/HydroTrack_Setup.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> d4d4d61 (Add working GitHub Actions)

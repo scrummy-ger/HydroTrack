@@ -5,8 +5,8 @@ a = Analysis(
     ['HydroTrack.py'],
     pathex=[],
     binaries=[],
-    datas=[('HydroTrack.ico', '.')],
-    hiddenimports=['customtkinter', 'matplotlib', 'PIL', 'pystray', 'winotify'],
+    datas=[('assets', 'assets')],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['HydroTrack.ico'],
+    icon=['assets\\HydroTrack.ico'],
 )
